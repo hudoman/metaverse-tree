@@ -8,6 +8,7 @@ class SpaceCompositionBuilder():
     _space_objs: List[Space] = []
 
     def __init__(self, spaces: List[str]):
+        self._space_objs = []
         if not spaces:
             raise AssertionError("Empty spaces list.")
         

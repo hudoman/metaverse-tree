@@ -1,5 +1,5 @@
 
-from items._utility import Utility
+from items._utility import Utility, utility_color_map
 from items._space import Space
 from items.enums import ForgeBonus, ForgeSpecialization, Category, Rarity, Type, Color
 
@@ -10,6 +10,7 @@ class AForge(Utility):
         self._category = Category.FORGE
         self._type = Type.A
         self._color = Color.RED
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ForgeSpecialization.TWO_HAND_AXE
         ]
@@ -24,6 +25,7 @@ class BForge(Utility):
         self._category = Category.FORGE
         self._type = Type.B
         self._color = Color.RED
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ForgeSpecialization.TWO_HAND_SWORD
         ]
@@ -38,6 +40,7 @@ class CForge(Utility):
         self._category = Category.FORGE
         self._type = Type.C
         self._color = Color.RED
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ForgeSpecialization.STAVES,
             ForgeSpecialization.DUAL_WIELD
@@ -53,6 +56,7 @@ class DForge(Utility):
         self._category = Category.FORGE
         self._type = Type.D
         self._color = Color.BLUE
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ForgeSpecialization.TWO_HAND_HAMMER
         ]
@@ -67,6 +71,7 @@ class EForge(Utility):
         self._category = Category.FORGE
         self._type = Type.E
         self._color = Color.BLUE
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ForgeSpecialization.ONE_HAND_WEAPONS
         ]
@@ -81,6 +86,7 @@ class FForge(Utility):
         self._category = Category.FORGE
         self._type = Type.F
         self._color = Color.BLUE
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ForgeSpecialization.TWO_HAND_SWORD,
             ForgeSpecialization.TWO_HAND_AXE
@@ -96,6 +102,7 @@ class GForge(Utility):
         self._category = Category.FORGE
         self._type = Type.G
         self._color = Color.GREEN
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ForgeSpecialization.STAVES
         ]
@@ -110,6 +117,7 @@ class HForge(Utility):
         self._category = Category.FORGE
         self._type = Type.H
         self._color = Color.GREEN
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ForgeSpecialization.DUAL_WIELD
         ]
@@ -124,6 +132,7 @@ class IForge(Utility):
         self._category = Category.FORGE
         self._type = Type.I
         self._color = Color.GREEN
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ForgeSpecialization.TWO_HAND_HAMMER,
             ForgeSpecialization.ONE_HAND_WEAPONS
@@ -132,24 +141,25 @@ class IForge(Utility):
             ForgeBonus.LUCK
         ]
 
-class JForge(Utility):
-    def __init__(self, id: int, rarity: Rarity):
-        super().__init__(id, rarity)
-        self._title = "Forge of Triumph"
-        self._category = Category.FORGE
-        self._type = Type.J
-        self._color = Color.RAINBOW
-        self._specializations = [
-            ForgeSpecialization.TWO_HAND_SWORD,
-            ForgeSpecialization.TWO_HAND_AXE,
-            ForgeSpecialization.TWO_HAND_HAMMER,
-            ForgeSpecialization.ONE_HAND_WEAPONS,
-            ForgeSpecialization.STAVES,
-            ForgeSpecialization.DUAL_WIELD
-        ]
-        self._bonuses = [ 
-            ForgeBonus.SPEED,
-            ForgeBonus.EFFICIENTY,
-            ForgeBonus.LUCK,
+# class JForge(Utility):
+#     def __init__(self, id: int, rarity: Rarity):
+#         super().__init__(id, rarity)
+#         self._title = "Forge of Triumph"
+#         self._category = Category.FORGE
+#         self._type = Type.J
+#         self._color = Color.RAINBOW
+#         self._color_hex = utility_color_map[self._color]
+#         self._specializations = [
+#             ForgeSpecialization.TWO_HAND_SWORD,
+#             ForgeSpecialization.TWO_HAND_AXE,
+#             ForgeSpecialization.TWO_HAND_HAMMER,
+#             ForgeSpecialization.ONE_HAND_WEAPONS,
+#             ForgeSpecialization.STAVES,
+#             ForgeSpecialization.DUAL_WIELD
+#         ]
+#         self._bonuses = [ 
+#             ForgeBonus.SPEED,
+#             ForgeBonus.EFFICIENTY,
+#             ForgeBonus.LUCK,
             
-        ]
+#         ]

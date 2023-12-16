@@ -11,6 +11,7 @@ class Space(ABC):
     _title: str
     _category: Category
     _rarity: Rarity
+    _rarity_color: str
     _size: Size
     _priority: int
     _total_doors: int
@@ -24,6 +25,12 @@ class Space(ABC):
     def __repr__(self):
         return f"{self._id}-{self._rarity}_{self._size}_{self._category}"
     
+    def get_string_key(self) -> str:
+        return f"{self._id}-{self._category.value}_{self._size.value}_{self._rarity.value}"
+    
+    def get_string_repr(self) -> str:
+        return f"{self._category.value}_{self._size.value}_{self._rarity.value}"
+    
     def add(self, component: Union["Space", Utility]) -> None:
         if not self.has_available_door():
             raise AssertionError("Not enough doors!")
@@ -31,13 +38,19 @@ class Space(ABC):
 
     def get_id(self) -> int:
         return self._id
-
+    
     def get_rarity(self) -> Rarity:
         return self._rarity
 
     def get_category(self) -> Category:
         return self._category
-          
+
+    def get_rarity(self) -> Rarity:
+        return self._rarity
+
+    def get_size(self) -> Size:
+        return self._size
+             
     def set_parent(self, parent: "Space"):
         self._parent = parent
 

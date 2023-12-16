@@ -9,7 +9,7 @@ from items.enums import (
     ArmoryBonus,
     TimeWardenSpecialization,
     TimeWardenBonus,
-    Type
+    Color
 )
 
 forge_by_bonus = {
@@ -17,19 +17,19 @@ forge_by_bonus = {
         AForge,
         BForge,
         CForge,
-        JForge
+        # JForge
     ],
     ForgeBonus.EFFICIENTY.value : [
         DForge,
         EForge,
         FForge,
-        JForge
+        # JForge
     ],
     ForgeBonus.LUCK.value : [
         GForge,
         HForge,
         IForge,
-        JForge
+        # JForge
     ],
 }
 
@@ -38,19 +38,19 @@ armory_by_bonus = {
         AArmory,
         BArmory,
         CArmory,
-        JArmory
+        # JArmory
     ],
     ArmoryBonus.EFFICIENTY.value : [
         DArmory,
         EArmory,
         FArmory,
-        JArmory
+        # JArmory
     ],
     ArmoryBonus.LUCK.value : [
         GArmory,
         HArmory,
         IArmory,
-        JArmory
+        # JArmory
     ],
 }
 
@@ -58,17 +58,17 @@ time_warden_by_bonus = {
     TimeWardenBonus.SPEED.value : [
         ATimeWarden,
         CTimeWarden,
-        DTimeWarden
+        # DTimeWarden
     ],
     TimeWardenBonus.EFFICIENTY.value : [
         ATimeWarden,
         BTimeWarden,
-        DTimeWarden
+        # DTimeWarden
     ],
     TimeWardenBonus.LUCK.value : [
         BTimeWarden,
         CTimeWarden,
-        DTimeWarden
+        # DTimeWarden
     ],
 }
 
@@ -76,32 +76,32 @@ forge_by_specialization = {
     ForgeSpecialization.TWO_HAND_AXE.value : [
         AForge,
         FForge,
-        JForge
+        # JForge
     ],
     ForgeSpecialization.TWO_HAND_HAMMER.value : [
         DForge,
         IForge,
-        JForge
+        # JForge
     ],
     ForgeSpecialization.TWO_HAND_SWORD.value : [
         BForge,
         FForge,
-        JForge
+        # JForge
     ],
     ForgeSpecialization.ONE_HAND_WEAPONS.value : [
         EForge,
         IForge,
-        JForge
+        # JForge
     ],
     ForgeSpecialization.DUAL_WIELD.value : [
         CForge,
         HForge,
-        JForge
+        # JForge
     ],
     ForgeSpecialization.STAVES.value : [
         CForge,
         GForge,
-        JForge
+        # JForge
     ],
 }
 
@@ -109,32 +109,32 @@ armory_by_specialization = {
     ArmorySpecialization.GLOVES.value : [
         AArmory,
         FArmory,
-        JArmory
+        # JArmory
     ],
     ArmorySpecialization.HELMETS.value : [
         BArmory,
         FArmory,
-        JArmory  
+        # JArmory  
     ],
     ArmorySpecialization.SHOULDERS.value : [
         DArmory,
         IArmory,
-        JArmory
+        # JArmory
     ],
     ArmorySpecialization.CHEST.value : [
         EArmory,
         IArmory,
-        JArmory
+        # JArmory
     ],
     ArmorySpecialization.LEGS.value : [
         CArmory,
         GArmory,
-        JArmory
+        # JArmory
     ],
     ArmorySpecialization.SHIELDS.value : [
         CArmory,
         HArmory,
-        JArmory
+        # JArmory
     ],
 }
 
@@ -142,7 +142,7 @@ time_warden_by_specialization = {
     TimeWardenSpecialization.RECHARGING.value : [
         ATimeWarden,
         CTimeWarden,
-        DTimeWarden
+        # DTimeWarden
     ],
     TimeWardenSpecialization.CRAFTING.value : [
         BTimeWarden
@@ -151,8 +151,86 @@ time_warden_by_specialization = {
         CTimeWarden
     ],
     TimeWardenSpecialization.CRAFTING_100.value : [
-        DTimeWarden
+        # DTimeWarden
     ],
+}
+
+forge_by_specialization_keyed = {
+    "2-hand-axe" : [
+        AForge,
+        FForge,
+        # JForge
+    ],
+    "2-hand-hammer" : [
+        DForge,
+        IForge,
+        # JForge
+    ],
+    "2-hand-sword" : [
+        BForge,
+        FForge,
+        # JForge
+    ],
+    "1-hand-weapons" : [
+        EForge,
+        IForge,
+        # JForge
+    ],
+    "dual-wield" : [
+        CForge,
+        HForge,
+        # JForge
+    ],
+    "staves" : [
+        CForge,
+        GForge,
+        # JForge
+    ],
+}
+
+armory_by_specialization_keyed = {
+    "gloves" : [
+        AArmory,
+        FArmory,
+        # JArmory
+    ],
+    "helmets" : [
+        BArmory,
+        FArmory,
+        # JArmory  
+    ],
+    "shoulders" : [
+        DArmory,
+        IArmory,
+        # JArmory
+    ],
+    "chest" : [
+        EArmory,
+        IArmory,
+        # JArmory
+    ],
+    "legs" : [
+        CArmory,
+        GArmory,
+        # JArmory
+    ],
+    "shields" : [
+        CArmory,
+        HArmory,
+        # JArmory
+    ],
+}
+
+time_warden_by_specialization_keyed = {
+    "recharging" : [
+        ATimeWarden,
+        CTimeWarden,
+        # DTimeWarden
+    ],
+    "crafting" : [
+        BTimeWarden,
+        # DTimeWarden
+    ]
 }
 
 utilities_by_category: Dict[Category, List[Utility]] = {
@@ -166,7 +244,7 @@ utilities_by_category: Dict[Category, List[Utility]] = {
         GArmory,
         HArmory,
         IArmory,
-        JArmory
+        # JArmory
     ],
     Category.FORGE : [
         AForge,
@@ -178,13 +256,13 @@ utilities_by_category: Dict[Category, List[Utility]] = {
         GForge,
         HForge,
         IForge,
-        JForge,
+        # JForge,
     ],
     Category.TIME_WARDEN : [
         ATimeWarden,
         BTimeWarden,
         CTimeWarden,
-        DTimeWarden
+        # DTimeWarden
     ],
 }
 
@@ -199,7 +277,7 @@ all_utilities: List[Utility] = [
     GArmory,
     HArmory,
     IArmory,
-    JArmory,
+    # JArmory,
     AForge,
     BForge,
     CForge,
@@ -209,9 +287,9 @@ all_utilities: List[Utility] = [
     GForge,
     HForge,
     IForge,
-    JForge,
+    # JForge,
     ATimeWarden,
     BTimeWarden,
     CTimeWarden,
-    DTimeWarden
+    # DTimeWarden
 ]

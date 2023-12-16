@@ -1,5 +1,5 @@
 
-from items._utility import Utility
+from items._utility import Utility, utility_color_map
 from items.enums import ArmoryBonus, ArmorySpecialization, Category, Rarity, Type, Color
 
 class AArmory(Utility):
@@ -9,6 +9,7 @@ class AArmory(Utility):
         self._category = Category.ARMORY
         self._type = Type.A
         self._color = Color.RED
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ArmorySpecialization.GLOVES
         ]
@@ -23,6 +24,7 @@ class BArmory(Utility):
         self._category = Category.ARMORY
         self._type = Type.B
         self._color = Color.RED
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ArmorySpecialization.HELMETS
         ]
@@ -37,6 +39,7 @@ class CArmory(Utility):
         self._category = Category.ARMORY
         self._type = Type.C
         self._color = Color.RED
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ArmorySpecialization.LEGS,
             ArmorySpecialization.SHIELDS
@@ -52,6 +55,7 @@ class DArmory(Utility):
         self._category = Category.ARMORY
         self._type = Type.D
         self._color = Color.BLUE
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ArmorySpecialization.SHOULDERS
         ]
@@ -66,6 +70,7 @@ class EArmory(Utility):
         self._category = Category.ARMORY
         self._type = Type.E
         self._color = Color.BLUE
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ArmorySpecialization.CHEST
         ]
@@ -80,6 +85,7 @@ class FArmory(Utility):
         self._category = Category.ARMORY
         self._type = Type.F
         self._color = Color.BLUE
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ArmorySpecialization.GLOVES,
             ArmorySpecialization.HELMETS
@@ -95,6 +101,7 @@ class GArmory(Utility):
         self._category = Category.ARMORY
         self._type = Type.G
         self._color = Color.GREEN
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ArmorySpecialization.LEGS
         ]
@@ -109,6 +116,7 @@ class HArmory(Utility):
         self._category = Category.ARMORY
         self._type = Type.H
         self._color = Color.GREEN
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ArmorySpecialization.SHIELDS
         ]
@@ -123,6 +131,7 @@ class IArmory(Utility):
         self._category = Category.ARMORY
         self._type = Type.I
         self._color = Color.GREEN
+        self._color_hex = utility_color_map[self._color]
         self._specializations = [
             ArmorySpecialization.SHOULDERS,
             ArmorySpecialization.CHEST
@@ -131,25 +140,27 @@ class IArmory(Utility):
             ArmoryBonus.LUCK
         ]
 
-class JArmory(Utility):
-    def __init__(self, id: int, rarity: Rarity):
-        super().__init__(id, rarity)
-        self._title = "Armory of Triumph"
-        self._category = Category.ARMORY
-        self._type = Type.J
-        self._color = Color.RAINBOW
-        self._specializations = [
-            ArmorySpecialization.GLOVES,
-            ArmorySpecialization.HELMETS,
-            ArmorySpecialization.SHOULDERS,
-            ArmorySpecialization.CHEST,
-            ArmorySpecialization.LEGS,
-            ArmorySpecialization.SHIELDS
-        ]    
+# class JArmory(Utility):
+#     def __init__(self, id: int, rarity: Rarity):
+#         super().__init__(id, rarity)
+#         self._title = "Armory of Triumph"
+#         self._category = Category.ARMORY
+#         self._type = Type.J
+#         self._color = Color.RAINBOW
+#         self._color_hex = utility_color_map[self._color]
+#         self._specializations = [
+#             ArmorySpecialization.GLOVES,
+#             ArmorySpecialization.HELMETS,
+#             ArmorySpecialization.SHOULDERS,
+#             ArmorySpecialization.CHEST,
+#             ArmorySpecialization.LEGS,
+#             ArmorySpecialization.SHIELDS
+#         ]    
 
-        self._bonuses = [ 
-            ArmoryBonus.SPEED,
-            ArmoryBonus.EFFICIENTY,
-            ArmoryBonus.LUCK,
+#         self._bonuses = [ 
+#             ArmoryBonus.SPEED,
+#             ArmoryBonus.EFFICIENTY,
+#             ArmoryBonus.LUCK,
             
-        ]
+#         ]
+        
