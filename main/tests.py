@@ -40,6 +40,5 @@ utility_comp_builder2.init_process_filter()
 utility_comp_builder2.fill_space_with_picked_combined_utility()
 utility_comp_builder2.build_real_space_utility_tree()
 
-utility_comp_builder2.generate_space_utility_html_table()
 real_tree = utility_comp_builder2.get_real_space_utility_tree()
 test=True
